@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Thank you for contacting Ogwu Praise Ajifa - Cybersecurity Professional">
+    <meta name="author" content="Ogwu Praise Ajifa">
+    <meta name="theme-color" content="#2a2a72">
+    <title>Thank You | Ogwu Praise Ajifa</title>
+
+    <!-- Preconnect to external domains -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="shortcut icon"
+        href="https://plus.unsplash.com/premium_photo-1676618539990-2be0f6078e60?w=700&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8Y3liZXJzZWN1cml0eSUyMGRldmVsb3BlciUyMGxvZ298ZW58MHx8MHx8fDA%3D"
+        type="image/x-icon">
+
+    <style>
+        /* ===== CUSTOM PROPERTIES ===== */
+        :root {
+            /* Colors */
+            --primary: #2a2a72;
+            --primary-light: #3a3a92;
+            --primary-dark: #1a1a52;
+            --secondary: #009ffd;
+            --secondary-light: #20afff;
+            --secondary-dark: #0080d0;
+            --accent: #00ff95;
+            --accent-light: #33ffaa;
+            --accent-dark: #00cc76;
+            --text-primary: #333333;
+            --text-secondary: #666666;
+            --bg-primary: #f8f9fa;
+            --bg-secondary: #ffffff;
+            --card-bg: rgba(255, 255, 255, 0.95);
+            --shadow: rgba(0, 0, 0, 0.1);
+            --gradient-1: linear-gradient(45deg, var(--primary), var(--secondary));
+            --gradient-2: linear-gradient(135deg, var(--secondary), var(--accent));
+            --gradient-3: linear-gradient(to right, var(--primary-dark), var(--primary));
+
+            /* Spacing */
+            --spacing-xs: 0.5rem;
+            --spacing-sm: 1rem;
+            --spacing-md: 2rem;
+            --spacing-lg: 4rem;
+            --spacing-xl: 8rem;
+
+            /* Border Radius */
+            --radius-sm: 8px;
+            --radius-md: 16px;
+            --radius-lg: 24px;
+            --radius-full: 9999px;
+
+            /* Transitions */
+            --transition-fast: 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+            --transition-normal: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            --transition-slow: 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+            --transition-bounce: 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+            /* Shadows */
+            --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.1);
+            --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.1);
+            --shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.1);
+            --shadow-hover: 0 10px 40px rgba(0, 0, 0, 0.15);
+
+            /* Typography */
+            --font-primary: 'Poppins', sans-serif;
+            --font-size-xs: 0.75rem;
+            --font-size-sm: 0.875rem;
+            --font-size-md: 1rem;
+            --font-size-lg: 1.25rem;
+            --font-size-xl: 1.5rem;
+            --font-size-2xl: 2rem;
+            --font-size-3xl: 3rem;
+            --font-size-4xl: 4rem;
+            --line-height-tight: 1.2;
+            --line-height-normal: 1.6;
+            --line-height-relaxed: 1.8;
+        }
+
+        /* Dark Mode Variables */
+        .dark-mode {
+            --primary: #009ffd;
+            --primary-light: #33b1ff;
+            --primary-dark: #0080d0;
+            --secondary: #2a2a72;
+            --secondary-light: #3a3a92;
+            --secondary-dark: #1a1a52;
+            --accent: #00ff95;
+            --text-primary: #ffffff;
+            --text-secondary: #cccccc;
+            --bg-primary: #121212;
+            --bg-secondary: #1a1a1a;
+            --card-bg: rgba(26, 26, 26, 0.95);
+            --shadow: rgba(255, 255, 255, 0.05);
+        }
+
+        /* ===== RESET & BASE STYLES ===== */
+        *,
+        *::before,
+        *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        html {
+            font-size: 16px;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: var(--font-primary);
+            background-color: var(--bg-primary);
+            color: var(--text-primary);
+            line-height: var(--line-height-normal);
+            transition: background-color var(--transition-normal),
+                color var(--transition-normal);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            overflow-x: hidden;
+        }
+
+        a {
+            color: var(--primary);
+            text-decoration: none;
+            transition: color var(--transition-normal);
+        }
+
+        a:hover {
+            color: var(--secondary);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 var(--spacing-md);
+        }
+
+        /* Navbar Styles */
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 100;
+            transition: all var(--transition-normal);
+            background: var(--card-bg);
+            box-shadow: var(--shadow-md);
+        }
+
+        .nav-content {
+            height: 80px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            position: relative;
+            z-index: 10;
+            background: var(--gradient-1);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            display: inline-block;
+        }
+
+        .theme-toggle {
+            background: none;
+            border: none;
+            cursor: pointer;
+            width: 40px;
+            height: 40px;
+            border-radius: var(--radius-full);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            color: var(--text-primary);
+            transition: all var(--transition-normal);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .theme-toggle i {
+            position: relative;
+            z-index: 1;
+            transition: transform var(--transition-normal);
+        }
+
+        /* Background Elements */
+        .background-elements {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            pointer-events: none;
+        }
+
+        .gradient-blob {
+            position: absolute;
+            width: 800px;
+            height: 800px;
+            background: linear-gradient(45deg,
+                    rgba(42, 42, 114, 0.3),
+                    rgba(0, 159, 253, 0.3),
+                    rgba(0, 255, 149, 0.3));
+            filter: blur(80px);
+            border-radius: 50%;
+            opacity: 0.5;
+            animation: blobAnimation 20s infinite alternate;
+        }
+
+        /* Thank You Page Specific Styles */
+        .thank-you-section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            padding: var(--spacing-xl) 0;
+            text-align: center;
+        }
+
+        .thank-you-card {
+            background: var(--card-bg);
+            border-radius: var(--radius-lg);
+            padding: var(--spacing-xl);
+            max-width: 700px;
+            box-shadow: var(--shadow-lg);
+            position: relative;
+            overflow: hidden;
+            animation: fadeInUp 1s forwards;
+        }
+
+        .thank-you-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: var(--gradient-1);
+        }
+
+        .thank-you-icon {
+            font-size: 4rem;
+            color: var(--accent);
+            margin-bottom: var(--spacing-md);
+            animation: scaleIn 0.5s 0.3s forwards, pulse 2s 1s infinite;
+            transform: scale(0);
+            opacity: 0;
+        }
+
+        .thank-you-title {
+            font-size: 2.5rem;
+            margin-bottom: var(--spacing-md);
+            background: var(--gradient-1);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            display: inline-block;
+        }
+
+        .thank-you-message {
+            color: var(--text-secondary);
+            margin-bottom: var(--spacing-lg);
+            font-size: 1.1rem;
+            line-height: var(--line-height-relaxed);
+        }
+
+        .return-btn {
+            padding: 1rem 2rem;
+            border-radius: var(--radius-full);
+            font-weight: 500;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: var(--gradient-1);
+            color: white;
+            text-decoration: none;
+            transition: all var(--transition-normal);
+            box-shadow: var(--shadow-md);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .return-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-hover);
+            color: white;
+        }
+
+        .return-btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg,
+                    transparent,
+                    rgba(255, 255, 255, 0.2),
+                    transparent);
+            transition: left 0.5s;
+            z-index: 1;
+        }
+
+        .return-btn:hover::before {
+            left: 100%;
+        }
+
+        .return-btn span {
+            position: relative;
+            z-index: 2;
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes scaleIn {
+            from {
+                transform: scale(0);
+                opacity: 0;
+            }
+
+            to {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.1);
+            }
+
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        @keyframes blobAnimation {
+            0% {
+                transform: translate(0, 0) scale(1);
+                border-radius: 40% 60% 70% 30% / 40% 40% 60% 50%;
+            }
+
+            50% {
+                transform: translate(50px, 25px) scale(1.1);
+                border-radius: 60% 40% 40% 60% / 60% 30% 70% 40%;
+            }
+
+            100% {
+                transform: translate(100px, 50px) scale(1.2);
+                border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%;
+            }
+        }
+
+        /* Media Queries */
+        @media (max-width: 768px) {
+            .thank-you-title {
+                font-size: 2rem;
+            }
+
+            .thank-you-card {
+                padding: var(--spacing-lg);
+                margin: 0 var(--spacing-md);
+            }
+
+            .thank-you-icon {
+                font-size: 3rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .thank-you-title {
+                font-size: 1.75rem;
+            }
+
+            .thank-you-message {
+                font-size: 1rem;
+            }
+
+            .thank-you-card {
+                padding: var(--spacing-md);
+            }
+
+            .thank-you-icon {
+                font-size: 2.5rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar" aria-label="Main navigation">
+        <div class="container nav-content">
+            <a href="index 4.html" class="logo">Ogwu Praise Ajifa</a>
+            <button class="theme-toggle" aria-label="Toggle dark mode">
+                <i class="fas fa-moon"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Background Elements -->
+    <div class="background-elements" aria-hidden="true">
+        <div class="gradient-blob"></div>
+    </div>
+
+    <!-- Thank You Section -->
+    <section class="thank-you-section">
+        <div class="thank-you-card">
+            <div class="thank-you-icon">
+                <i class="fas fa-check-circle"></i>
+            </div>
+            <h1 class="thank-you-title">Thank You!</h1>
+            <p class="thank-you-message">
+                Your message has been successfully sent. I appreciate you taking the time to reach out and will respond
+                to your inquiry as soon as possible. I typically respond within 24-48 hours.
+            </p>
+            <a href="index 4.html" class="return-btn">
+                <span>Return to Homepage</span>
+                <i class="fas fa-home"></i>
+            </a>
+        </div>
+    </section>
+
+    <script>
+        // Dark mode toggle
+        document.addEventListener('DOMContentLoaded', () => {
+            const themeToggle = document.querySelector('.theme-toggle');
+
+            // Check for system preference
+            if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+                document.body.classList.add('dark-mode');
+                updateThemeIcon();
+            }
+
+            // Listen for changes to color scheme preference
+            window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', event => {
+                if (event.matches) {
+                    document.body.classList.add('dark-mode');
+                } else {
+                    document.body.classList.remove('dark-mode');
+                }
+                updateThemeIcon();
+            });
+
+            // Toggle button functionality
+            if (themeToggle) {
+                themeToggle.addEventListener('click', () => {
+                    document.body.classList.toggle('dark-mode');
+                    updateThemeIcon();
+                });
+            }
+
+            function updateThemeIcon() {
+                const icon = document.querySelector('.theme-toggle i');
+                if (document.body.classList.contains('dark-mode')) {
+                    icon.classList.remove('fa-moon');
+                    icon.classList.add('fa-sun');
+                } else {
+                    icon.classList.remove('fa-sun');
+                    icon.classList.add('fa-moon');
+                }
+            }
+        });
+    </script>
+</body>
+
+</html>
